@@ -1,3 +1,9 @@
+input Filters {
+    # example filter for later impl
+    one: Int,
+    two: String
+}
+
 type FoodTruck {
     id: ID,
     name: String!,
@@ -11,7 +17,12 @@ type FoodTruck {
 }
 
 type QueryRoot {
-    foodTrucks: [FoodTruck]
+    foodTrucks(userLatitude: Float,
+               userLongitude: Float,
+               filters: Filters,
+               order: String,
+               pageSize: Int,
+               pageIdx: Int): [FoodTruck]
 }
 
 schema { query: QueryRoot }
