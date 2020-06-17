@@ -17,8 +17,8 @@ type FoodTruck {
 }
 
 type QueryRoot {
-    foodTrucks(userLatitude: Float,
-               userLongitude: Float,
+    foodTrucks(userLatitude: Float!,
+               userLongitude: Float!,
                filters: Filters,
                order: String,
                pageSize: Int,
