@@ -1,4 +1,4 @@
-# take-home-engineering-challenge
+# take_home_engineering_challenge
 
 FIXME: description
 
@@ -10,7 +10,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar take-home-engineering-challenge-0.1.0-standalone.jar [args]
+    $ java -jar take_home_engineering_challenge-0.1.0-standalone.jar [args]
 
 ## Options
 

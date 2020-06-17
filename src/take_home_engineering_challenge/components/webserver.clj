@@ -1,8 +1,8 @@
-(ns take-home-engineering-challenge.components.webserver
+(ns take_home_engineering_challenge.components.webserver
   (:require [ring.middleware.json :as json]
             [ring.adapter.jetty :as jetty]
             [ring.logger :as logger]
-            [take-home-engineering-challenge.webserver.app_routes :refer [app-routes]]
+            [take_home_engineering_challenge.webserver.app_routes :refer [app-routes]]
 ))
 
 (def handler

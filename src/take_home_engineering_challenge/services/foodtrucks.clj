@@ -1,8 +1,8 @@
-(ns take-home-engineering-challenge.services.foodtrucks
+(ns take_home_engineering_challenge.services.foodtrucks
   (:require [clojure.core.memoize :as memo]
             [taoensso.timbre :as log]
             [haversine.core :as haversine]
-            [take-home-engineering-challenge.components.sf_gov_adapter :refer [food-truck-data]]))
+            [take_home_engineering_challenge.components.sf_gov_adapter :refer [food-truck-data]]))
 
 (def cached-data (memo/ttl food-truck-data :ttl/threshold 3600000))
 

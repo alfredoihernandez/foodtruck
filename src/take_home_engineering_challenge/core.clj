@@ -1,6 +1,6 @@
-(ns take-home-engineering-challenge.core
+(ns take_home_engineering_challenge.core
   (:require [taoensso.timbre :as log]
-            [take-home-engineering-challenge.components.webserver :refer [web-server]]
+            [take_home_engineering_challenge.components.webserver :refer [web-server]]
             ))
 
 (defn start-web-server []

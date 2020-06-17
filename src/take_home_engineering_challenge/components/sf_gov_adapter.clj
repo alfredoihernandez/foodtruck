@@ -1,4 +1,4 @@
-(ns take-home-engineering-challenge.components.sf_gov_adapter
+(ns take_home_engineering_challenge.components.sf_gov_adapter
   (:require [csv-map.core :as csv]
             [clojure.string :refer [blank?]]
             [taoensso.timbre :as log]))

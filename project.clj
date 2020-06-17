@@ -1,4 +1,4 @@
-(defproject take-home-engineering-challenge "0.1.0-SNAPSHOT"
+(defproject take_home_engineering_challenge "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -15,6 +15,6 @@
                  [haversine "0.1.1"]
                  [alumbra "0.2.6"]
                  [alumbra/claro "0.1.14"]]
-  :main ^:skip-aot take-home-engineering-challenge.core
+  :main ^:skip-aot take_home_engineering_challenge.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
