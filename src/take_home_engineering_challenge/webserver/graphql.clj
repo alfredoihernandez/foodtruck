@@ -2,11 +2,12 @@
   (:require [taoensso.timbre :as log]
             [alumbra.core :as graphql]
             [claro.data :as data]
+            [take_home_engineering_challenge.services.config :refer [gather-configs]]
 ))
 
 (def schema
   ;schema naming conventions: https://www.apollographql.com/docs/apollo-server/schema/schema/#:~:text=Naming%20conventions
-  (slurp "src/take_home_engineering_challenge/resources/schema.graphql"))
+  (slurp (:graphql-schema-path gather-configs)))
 
 (defrecord Person [id]
   data/Resolvable

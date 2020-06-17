@@ -1,7 +1,9 @@
 (ns take_home_engineering_challenge.components.sf_gov_adapter
   (:require [csv-map.core :as csv]
             [clojure.string :refer [blank?]]
-            [taoensso.timbre :as log]))
+            [taoensso.timbre :as log]
+            [take_home_engineering_challenge.services.config :refer [gather-configs]]
+))
 
 (defn cleaned-string [s, type-wrapper]
   (if (blank? s)
@@ -30,7 +32,8 @@
 (def food-truck-raw
   (log/info "Expensive call to sfgov.org")
   (->
-   "https://data.sfgov.org/api/views/rqzj-sfat/rows.csv?accessType=DOWNLOAD"
+   gather-configs
+   :sf-download-csv-link
    slurp
    csv/parse-csv))
 

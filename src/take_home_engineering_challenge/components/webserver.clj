@@ -3,6 +3,7 @@
             [ring.adapter.jetty :as jetty]
             [ring.logger :as logger]
             [take_home_engineering_challenge.webserver.app_routes :refer [app-routes]]
+            [take_home_engineering_challenge.services.config :refer [gather-configs]]
 ))
 
 (def handler
@@ -11,4 +12,4 @@
       logger/wrap-with-logger
 ))
 
-(defonce web-server (jetty/run-jetty handler {:port 3000 :join? false}))
+(defonce web-server (jetty/run-jetty handler {:port (:port gather-configs) :join? false}))
