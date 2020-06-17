@@ -1,11 +1,17 @@
-type Person {
+type FoodTruck {
+    id: ID,
     name: String!,
-    friends: [Person!]!
+    type: String,
+    address: String!,
+    permitStatus: String!,
+    cuisineDesc: String,
+    latitude: Float,
+    longitude: Float,
+    distance: Float
 }
 
 type QueryRoot {
-    person(id: ID!): Person,
-    me: Person!
+    foodTrucks: [FoodTruck]
 }
 
 schema { query: QueryRoot }

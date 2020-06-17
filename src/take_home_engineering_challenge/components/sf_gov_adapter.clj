@@ -30,11 +30,11 @@
    })
 
 (def food-truck-raw
-  (log/info "Expensive call to sfgov.org")
-  (->
-   gather-configs
-   :sf-download-csv-link
-   slurp
-   csv/parse-csv))
+  (let [link (:sf-download-csv-link gather-configs)]
+    (log/info "Expensive call to sfgov.org")
+    (->
+     link
+     slurp
+     csv/parse-csv)))
 
 (defn food-truck-data [] (map clean-csv-row food-truck-raw))
