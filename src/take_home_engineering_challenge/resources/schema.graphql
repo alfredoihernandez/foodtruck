@@ -1,0 +1,11 @@
+type Person {
+    name: String!,
+    friends: [Person!]!
+}
+
+type QueryRoot {
+    person(id: ID!): Person,
+    me: Person!
+}
+
+schema { query: QueryRoot }
