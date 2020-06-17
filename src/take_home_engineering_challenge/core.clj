@@ -1,6 +1,7 @@
 (ns take_home_engineering_challenge.core
   (:require [taoensso.timbre :as log]
             [take_home_engineering_challenge.components.webserver :refer [web-server]]
+            [take_home_engineering_challenge.services.config :refer [gather-configs]]
             ))
 
 (defn start-web-server []
@@ -12,7 +13,9 @@
 (defn -main
   ""
   [& _]
-  (log/info "Starting WebServer")
-  (start-web-server)
-  (log/info "Started WebServer")
-)
+  (let [configs gather-configs]
+    (log/info "Configs:" configs)
+    (log/info "Starting WebServer")
+    (start-web-server)
+    (log/info "Started WebServer")
+))

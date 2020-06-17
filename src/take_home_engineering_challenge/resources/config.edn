@@ -1,0 +1,5 @@
+{
+ :port 3000
+ :graphql-schema-path "src/take_home_engineering_challenge/resources/schema.graphql"
+ :sf-download-csv-link "https://data.sfgov.org/api/views/rqzj-sfat/rows.csv?accessType=DOWNLOAD"
+ }
